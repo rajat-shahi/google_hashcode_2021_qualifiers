@@ -1,0 +1,22 @@
+for building the local-simulator simulate the whole process.
+Maybe it can be simulated using a queue.
+Creating tester for this problem is hard. Explore 'misof' tutorial and code for creating this.
+
+
+
+IDEA-1 : (for getting some random)
+------
+
+First have the count of cars which goes through each intersection for all the intersections.
+Then, for each and every intersection open the traffic lights on the basis of the maximum frequency for that intersection.
+
+
+total score = 7,230,406
+
+A - 1001
+B - 4559622
+C - 1,228,351 (98% of the cars reach in time)
+D - 0 (change the greedy solution)
+E - 675783
+F - 765649    
+
