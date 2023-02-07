@@ -20,3 +20,13 @@ D - 0 (change the greedy solution)
 E - 675783
 F - 765649    
 
+
+taking the roads in the reverse order :
+total score = 7258454
+
+A-2002
+B-4560902
+C-669701
+D-0
+E-796552
+F-1229297

@@ -61,8 +61,16 @@ long long D, I, S, V, F;
 vector<street> Streets;
 vector<car> Cars;
 
+// struct cmp
+// {
 
-vector<map<string, int>> incomingCars;  // {street,cnt}
+// 	bool operator()(const pair<string, int>& p1, const pair<string, int>& p2)
+// 	{
+// 		return p1.second > p2.second;
+// 	}
+// };
+
+vector<map<string, int>> incomingCars; // {street,cnt}
 map<string, pair<int, int>> streetEndpoints;
 
 int main()
@@ -110,19 +118,33 @@ int main()
 
 	cout << incomingCars.size() - (int)exclude.size() << endl;
 
+	// for (int inter = 0; inter < I; inter++)
+	// {
+	// 	if (exclude[inter] == true) continue;
+	// 	cout << inter << endl;
+	// 	cout << (int)incomingCars[inter].size() << endl;
+	// 	// traversing the map of a particular intersection
+	// 	for (auto && road : incomingCars[inter])
+	// 	{
+	// 		cout << road.first << " " << road.second << endl;
+	// 	}
+
+	// 	// cout << endl;
+	// }
+
 	for (int inter = 0; inter < I; inter++)
 	{
 		if (exclude[inter] == true) continue;
 		cout << inter << endl;
 		cout << (int)incomingCars[inter].size() << endl;
-		// traversing the map of a particular intersection
-		for (auto && road : incomingCars[inter])
-		{
-			cout << road.first << " " << road.second << endl;
-		}
 
-		// cout << endl;
+		for (auto it = incomingCars[inter].rbegin(); it != incomingCars[inter].rend(); it++)
+		{
+			auto tmp = *it;
+			cout << tmp.first << " " << tmp.second << endl;
+		}
 	}
+
 
 
 
